@@ -62,5 +62,17 @@ BOOST_AUTO_TEST_CASE(test4)
   BOOST_CHECK_EQUAL(result[2], "1572830914000000");
 }
 
+BOOST_AUTO_TEST_CASE(test5)
+{
+  auto point = Point{"test"}
+    .addField("value_true", true)
+    .addField("value_false", false);
+
+  auto result = getVector(point);
+
+  BOOST_CHECK_EQUAL(result[0], "test");
+  BOOST_CHECK_EQUAL(result[1], "value_true=t,value_false=f");
+}
+
 } // namespace test
 } // namespace influxdb

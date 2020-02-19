@@ -54,9 +54,6 @@ void InfluxDB::addGlobalTag(std::string_view key, std::string_view value)
 
 InfluxDB::~InfluxDB()
 {
-  if (mBuffering) {
-    flushBuffer();
-  }
 }
 
 void InfluxDB::transmit(std::string&& point)
