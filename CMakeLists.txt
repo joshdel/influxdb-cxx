@@ -129,6 +129,8 @@ if (Boost_FOUND)
 
   add_executable(benchmark test/benchmark.cxx)
   target_link_libraries(benchmark PRIVATE InfluxDB Boost::program_options)
+
+  add_definitions(-DBOOST_BIND_GLOBAL_PLACEHOLDERS)
 endif()
 
 
