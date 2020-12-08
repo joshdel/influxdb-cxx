@@ -34,7 +34,7 @@ void HTTP::initCurl(const std::string& url)
   curl_easy_setopt(writeHandle, CURLOPT_URL,  writeUrl.c_str());
   curl_easy_setopt(writeHandle, CURLOPT_SSL_VERIFYPEER, 0);
   curl_easy_setopt(writeHandle, CURLOPT_CONNECTTIMEOUT, 10);
-  curl_easy_setopt(writeHandle, CURLOPT_TIMEOUT, 10);
+  curl_easy_setopt(writeHandle, CURLOPT_TIMEOUT, 30);
   curl_easy_setopt(writeHandle, CURLOPT_POST, 1);
   curl_easy_setopt(writeHandle, CURLOPT_TCP_KEEPIDLE, 120L);
   curl_easy_setopt(writeHandle, CURLOPT_TCP_KEEPINTVL, 60L);
